@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDO AL SITIO DE VENTAS</title>
+    <!-- CSS de Bootstrap correcto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JS de Bootstrap con bundle que incluye Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--IMPORTANDO ICONOS DE FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importando sweetaler-->>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body >
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><b>Ciencia</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"><b>Inicio</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="inicio"><b>Vucanologo</b></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="inicio5"><b>Tipo</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="inicio"><b>Cajeros</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="inicio2"><b>Clientes</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="inicio3"><b>Facturas</b></a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        {% block contenido %}
+        {% endblock %}
+    </div>
+    
+    <!-- PARA QUE SE PINTE EL FONDO DEL RECUADRO-->
+    <div class="row bg-secondary" style="padding: 20px;color:white">
+        <div class="col-md-4 text-center">
+            <img height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUJRFA3lwNwI5TalJ8FY3_vu8urz0Q7UL_w&s">
+        </div>
+        <div class="col-md-4 text-center">
+            <h4><b>Desarollado por</b></h4>
+            <h5>Stalin Jiame </h5> 
+        </div>
+        <div class="col-md-4 text-center">
+            <h4>Latacunga 2025</h4>
+        </div>
+    </div>
+    {% if messages %}
+      {% for mensaje in messages %}
+        <script>
+          Swal.fire({
+            title:"CONFIRMACIÓN",
+            text:"{{mensaje}}",
+            icon:"success"
+          });
+        </script>
+      {% endfor %}
+    {% endif %}
+    
+</body>
+</html>

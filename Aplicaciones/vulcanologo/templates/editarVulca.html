@@ -1,0 +1,38 @@
+<!-- el extend es para heredar -->
+{% extends './plantilla.html' %}
+{% block contenido %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 bg-light p-4 rounded shadow-sm">
+        <h1 class="mb-4">Editar Cajero</h1>
+        <form action="/procesarEdicionVulca" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{vulcaEditar.id}}">
+            
+            <label for="nombre">Nombre:</label>
+            <input class="form-control mb-3" type="text" name="nombre" id="nombre" value="{{cajeroEditar.nombre}}" >
+
+            <label for="cedula">Cédula:</label>
+            <input class="form-control mb-3" type="text" name="cedula" id="cedula" value="{{cajeroEditar.cedula}}" >
+
+            <label for="turno">Turno:</label>
+            <input class="form-control mb-3" type="text" name="turno" id="turno" value="{{cajeroEditar.turno}}" >
+
+
+
+            <button
+            class="btn btn-warning"
+            type="submit"><i class="fa fa-pen"></i>
+                Editar</button>
+            <a 
+            class="btn btn-outline-danger"
+            href="inicio4"><i class=" fa fa-times"></i>
+                Cancelar
+            </a>
+            
+        </form>
+        <br>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}
