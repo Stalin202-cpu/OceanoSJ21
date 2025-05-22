@@ -16,23 +16,25 @@
             <th>ID</th>
           
             <th>NOMBRE</th>
-            <th>CÉDULA</th>
-            <th>TURNO</th>
+            <th>APELLIDO</th>
+            <th>ESPECIALIDAD</th>
+            <th>EMAIL</th>
 
         </tr>
     </thead>
     <tbody>
-        {% for cargoCajeros in Cajeros %}
+        {% for cargoVulca in vulcanologo %}
             <tr>
-                <td>{{cargoCajeros.id}}</td>
-                <td>{{cargoCajeros.nombre}}</td>
-                <td>{{cargoCajeros.cedula}}</td>
-                <td>{{cargoCajeros.turno}}</td>
+                <td>{{cargoVulca.id}}</td>
+                <td>{{cargoVulca.nombre}}</td>
+                <td>{{cargoVulca.apellido}}</td>
+                <td>{{cargoVulca.especialidad}}</td>
+                <td>{{cargoVulca.email}}</td>
 
                 <td>
-                    <a href="editarCajero/{{cargoCajeros.id}}" class="btn btn-outline-warning"><i class="fa fa-pen"></i></a>
+                    <a href="editarCajero/{{cargoVulca.id}}" class="btn btn-outline-warning"><i class="fa fa-pen"></i></a>
                     <a href="#" 
-                    onclick="eliminarCajero('{{cargoCajeros.id}}')"
+                    onclick="eliminarCajero('{{cargoVulca.id}}')"
                     class="btn btn-outline-danger">
                         <i class="fa fa-trash"></i>
                     </a>
