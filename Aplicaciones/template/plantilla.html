@@ -1,85 +1,126 @@
-<!DOCTYPE html>
-<html lang="es">
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Telephasic by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<!-- CSS de Bootstrap correcto -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- JS de Bootstrap con bundle que incluye Popper -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!--IMPORTANDO ICONOS DE FONTAWESOME-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Importando sweetaler-->>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIENVENIDO AL SITIO DE VENTAS</title>
-    <!-- CSS de Bootstrap correcto -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- JS de Bootstrap con bundle que incluye Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--IMPORTANDO ICONOS DE FONTAWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Importando sweetaler-->>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body >
-    <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><b>Ciencia</b></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"><b>Inicio</b></a>
-              </li>
+			<!-- Header -->
+			<div id="header-wrapper">
+				<div id="header" class="container">
 
-              <li class="nav-item">
-                <a class="nav-link" href="inicio"><b>Vucanologo</b></a>
-              </li>
+					<!-- Logo -->
+					<h1 id="logo"><a href="">Inicio</a></h1>
 
-              <li class="nav-item">
-                <a class="nav-link" href="inicio5"><b>Tipo</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="inicio"><b>Cajeros</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="inicio2"><b>Clientes</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="inicio3"><b>Facturas</b></a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <div class="container-fluid">
-        {% block contenido %}
-        {% endblock %}
-    </div>
-    
-    <!-- PARA QUE SE PINTE EL FONDO DEL RECUADRO-->
-    <div class="row bg-secondary" style="padding: 20px;color:white">
-        <div class="col-md-4 text-center">
-            <img height="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUJRFA3lwNwI5TalJ8FY3_vu8urz0Q7UL_w&s">
-        </div>
-        <div class="col-md-4 text-center">
-            <h4><b>Desarollado por</b></h4>
-            <h5>Stalin Jiame </h5> 
-        </div>
-        <div class="col-md-4 text-center">
-            <h4>Latacunga 2025</h4>
-        </div>
-    </div>
-    {% if messages %}
-      {% for mensaje in messages %}
-        <script>
-          Swal.fire({
-            title:"CONFIRMACIÓN",
-            text:"{{mensaje}}",
-            icon:"success"
-          });
-        </script>
-      {% endfor %}
-    {% endif %}
-    
-</body>
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li>
+							</li>
+							<li class="nav-item">
+                				<a class="nav-link" href=""><b>Artistas</b></a>
+              				</li>
+							<li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
+							<li><a href="no-sidebar.html">No Sidebar</a></li>
+							<li><a href="no-sidebar.html">No Sidebar</a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+			</div>
+
+			<!-- Features 2 -->
+			<div class="wrapper">
+				<section class="container">
+					<header class="major">
+						<h2>Bienvenido al sistema de Gestión de Estudios de Volcanología</h2>
+						<p>Bienvenido al sistema de Gestión de Estudios de Volcanología, una plataforma diseñada para organizar, registrar y acceder eficientemente a información científica relacionada con la actividad volcánica y sus investigaciones.</p>
+					</header>
+					<div class="row features">
+						<section class="col-4 col-12-narrower feature">
+							<div class="image-wrapper first">
+								<a href="#" class="image featured"><img src="{% static 'images/Intitucion.png' %}" alt="" /></a>
+							</div>
+							<p>Conoce nuestra institución dedicada a la investigación y monitoreo volcánico, comprometida con la seguridad y el desarrollo científico en el área de vulcanología.</p>
+						</section>
+						<section class="col-4 col-12-narrower feature">
+							<div class="image-wrapper">
+								<a href="#" class="image featured"><img src="{% static 'images/Intitucion.jpg' %}" alt="" /></a>
+							</div>
+							<p>Explora los proyectos actuales y pasados que buscan comprender mejor la actividad volcánica, sus riesgos y sus impactos en las comunidades.</p>
+						</section>
+						<section class="col-4 col-12-narrower feature">
+							<div class="image-wrapper">
+								<a href="#" class="image featured"><img src="{% static 'images/Intitucion.jpg' %}" alt="" /></a>
+							</div>
+							<p>Descubre el equipo de vulcanólogos expertos que lideran las investigaciones y estudios para anticipar y mitigar fenómenos volcánicos.</p>
+						</section>
+					</div>
+				</section>
+			</div>
+
+			<div class="container-fluid">
+        		{% block contenido %}
+        		{% endblock %}
+    		</div>
+			
+
+			<!-- Footer -->
+			<div id="footer-wrapper">
+				<div id="footer" class="container">
+					<header class="major">
+						<h2>Contáctanos en las siguientes redes sociales</h2>
+						<p>Gracias por Usar el Programa </p>
+					</header>
+					<div class="row">
+						<section class="col-6 col-12-narrower">
+							<div class="row gtr-0">
+								<ul class="divided icons col-6 col-12-mobile">
+									<li class="icon brands fa-twitter"><a href="#"><span class="extra">twitter.com/</span>untitled</a></li>
+									<li class="icon brands fa-facebook-f"><a href="#"><span class="extra">facebook.com/</span>untitled</a></li>
+									<li class="icon brands fa-dribbble"><a href="#"><span class="extra">dribbble.com/</span>untitled</a></li>
+								</ul>
+								<ul class="divided icons col-6 col-12-mobile">
+									<li class="icon brands fa-instagram"><a href="#"><span class="extra">instagram.com/</span>untitled</a></li>
+									<li class="icon brands fa-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
+									<li class="icon brands fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div id="copyright" class="container">
+					<ul class="menu">
+						<li>&copy; Desarrollado Por: Stalin Jaime</li><li>Design: <a href="https://www.utc.edu.ec/">Universidad Técnica de Cotopaxi</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
 </html>
+
+
