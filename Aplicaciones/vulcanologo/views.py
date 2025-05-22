@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import vulcanologo
 
-# Create your views here.
+def inicio(request):
+    listadoCajeros = vulcanologo.objects.all()
+    return render( request, "inicio.html", {'Cajeros': listadoCajeros})
