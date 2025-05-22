@@ -35,7 +35,7 @@ def editarVulca(request, id):
     vulcaEditar = vulcanologo.objects.get(id=id)
     return render(request, "editarVulca.html", {'vulcaEditar': vulcaEditar})
 
-def procesarEdicionCajeros(request):
+def procesarEdicionVulca(request):
     
     id=request.POST["id"]
     nombre = request.POST["nombre"]
